@@ -1,0 +1,23 @@
+[project]
+name = "agentenv_searchqa"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "SixPlusSeven67", email = "jqliu22@m.fudan.edu.cn"},
+    {name = "kevin236-max", email = "1489562626@qq.com"}
+]
+dependencies = [
+    "tensordict==0.5.0",
+    "fastapi",
+    "uvicorn[standard]",
+]
+requires-python = ">=3.10,<3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project.scripts]
+searchqa = "agentenv_searchqa:launch"

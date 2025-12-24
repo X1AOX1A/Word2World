@@ -1,0 +1,546 @@
+/* 导入卡通风格字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS变量定义 - 高对比度卡通风格 */
+:root {
+  /* 主色调 */
+  --primary-color: #8B5CF6;        
+  --primary-dark: #7C3AED;         
+  --primary-light: #A78BFA;        
+  --secondary-color: #667eea;      
+  --secondary-dark: #5A6ACF;       
+  --secondary-light: #818CF8;      
+  --accent-color: #FF6B6B;         
+  --accent-dark: #FF5252;          
+  --accent-light: #FF8A80;         
+  --success-color: #10B981;        
+  --success-dark: #059669;         
+  --success-light: #34D399;        
+  --warning-color: #FFC107;        
+  --warning-light: #FFEB3B;        
+  --danger-color: #EF4444;         
+  --danger-light: #F87171;         
+  
+  /* 高对比度背景 */
+  --bg-gradient: linear-gradient(135deg, #8B5CF6 0%, #667eea 100%);
+  --bg-card: #FFFFFF;              /* 纯白卡片背景 */
+  --bg-card-hover: rgba(248, 249, 250, 1);
+  --bg-card-solid: #FFFFFF;        /* 纯白背景 */
+  --bg-secondary: #F8F9FA;         /* 浅灰背景 */
+  
+  /* 高对比度文字颜色 */
+  --text-primary: #1A1A1A;         /* 深黑文字 */
+  --text-secondary: #2D3748;       /* 深灰文字 */
+  --text-light: #4A5568;           /* 中灰文字 */
+  --text-white: #FFFFFF;           /* 纯白文字 */
+  --text-accent: #7C3AED;          /* 紫色强调文字 */
+  
+  /* 边框颜色 */
+  --border-light: #E2E8F0;         
+  --border-medium: #CBD5E0;        
+  --border-dark: #A0AEC0;          
+  --border-highlight: #FFC107;     
+  --border-accent: #FF6B6B;        
+  
+  /* 阴影效果 */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 15px 35px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(255, 193, 7, 0.4);
+  
+  /* 圆角 */
+  --radius-small: 12px;            
+  --radius-medium: 16px;           
+  --radius-large: 24px;            
+  --radius-xl: 32px;               
+  
+  /* 动画过渡 */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* 字体系统 */
+  --font-primary: 'Inter', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-secondary: 'Nunito', 'Poppins', sans-serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+}
+
+/* 全局样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background: var(--bg-gradient);
+  color: var(--text-primary);        /* 改为深色文字 */
+  line-height: 1.6;
+  font-size: 16px;
+  height: 100vh;
+  overflow: hidden;
+  font-weight: 400;
+  position: relative;
+}
+
+/* App主容器 - 高对比度卡通风格 */
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card-solid);  /* 纯白背景 */
+  border-radius: var(--radius-large);
+  margin: 16px;
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+  border: 4px solid var(--border-highlight);  /* 加粗黄色边框 */
+  position: relative;
+}
+
+#app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    var(--primary-color) 0%, 
+    var(--accent-color) 50%, 
+    var(--secondary-color) 100%);
+  z-index: 10;
+}
+
+#app::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, 
+    var(--secondary-color) 0%, 
+    var(--accent-color) 50%, 
+    var(--primary-color) 100%);
+  z-index: 10;
+}
+
+/* 应用头部 - 高对比度 */
+.app-header {
+  background: var(--bg-card-solid);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 3px solid var(--border-highlight);
+  box-shadow: var(--shadow-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);      /* 深色标题 */
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+  font-family: var(--font-secondary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-header p {
+  color: var(--text-secondary);    /* 深灰副标题 */
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+}
+
+/* 主容器 */
+.main-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+/* 环境查看器 - 高对比度 */
+.env-viewer {
+  padding: 2rem;
+  background: var(--bg-card-solid);
+  overflow-y: auto;
+  border-radius: 0;
+  color: var(--text-primary);
+}
+
+/* 交互面板 - 高对比度 */
+.interaction-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card-solid);
+  color: var(--text-primary);
+}
+
+.interaction-history {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  border-bottom: 2px solid var(--border-light);
+  background: var(--bg-card-solid);
+}
+
+.action-input {
+  padding: 2rem;
+  background: var(--bg-card-solid);
+  border-top: 2px solid var(--border-light);
+}
+
+/* 连接状态 - 高对比度 */
+.connection-status {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: var(--bg-card-solid);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-medium);
+  border: 3px solid var(--border-light);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+}
+
+.connection-status.connected {
+  background: linear-gradient(135deg, #E6FFFA 0%, #B2F5EA 100%);
+  border-color: var(--success-color);
+  color: var(--success-dark);
+}
+
+.connection-status.disconnected {
+  background: linear-gradient(135deg, #FED7D7 0%, #FEB2B2 100%);
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 15px;
+  animation: pulse-status 2s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.status-connected {
+  background: var(--success-color);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+}
+
+.status-disconnected {
+  background: var(--danger-color);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+}
+
+/* 环境状态和信息 - 高对比度 */
+.env-state,
+.env-info-card,
+.creation-card,
+.control-panel {
+  background: var(--bg-card-solid);
+  padding: 2rem;
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-medium);
+  border: 2px solid var(--border-light);
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.env-state h3,
+.env-info-card h4,
+.creation-card h3,
+.control-panel h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.env-description {
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* 按钮样式 - 卡通高对比度 */
+.btn {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  border: 3px solid transparent;
+  border-radius: var(--radius-xl);
+  padding: 1.2rem 2.5rem;
+  cursor: pointer;
+  transition: all var(--transition-bounce);
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-medium);
+  position: relative;
+  overflow: hidden;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  transform: translateY(0);
+  background-clip: padding-box;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-strong);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  filter: grayscale(0.8);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-create {
+  background: linear-gradient(135deg, var(--success-color) 0%, var(--success-light) 100%);
+  color: var(--text-white);
+  border-color: var(--success-dark);
+  box-shadow: var(--shadow-medium), 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-create:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--success-dark), var(--success-color));
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--shadow-strong), 0 0 30px rgba(16, 185, 129, 0.5);
+}
+
+.btn-refresh {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
+  color: var(--text-white);
+  border-color: var(--secondary-dark);
+}
+
+.btn-reset {
+  background: linear-gradient(135deg, var(--warning-color) 0%, var(--warning-light) 100%);
+  color: var(--text-primary);
+  border-color: #E6A700;
+  font-weight: 700;
+}
+
+.btn-start {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--text-white);
+  border-color: var(--primary-dark);
+}
+
+.btn-stop {
+  background: linear-gradient(135deg, var(--danger-color) 0%, var(--danger-light) 100%);
+  color: var(--text-white);
+  border-color: #DC2626;
+}
+
+/* 历史记录项 - 高对比度 */
+.history-item {
+  margin-bottom: 1.2rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-medium);
+  background: var(--bg-card-solid);
+  border: 2px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-normal);
+  color: var(--text-primary);
+}
+
+.history-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--border-medium);
+}
+
+.history-item.action {
+  background: linear-gradient(135deg, #EBF8FF 0%, #BEE3F8 100%);
+  border-left: 6px solid var(--secondary-color);
+}
+
+.history-item.response {
+  background: linear-gradient(135deg, #F0FDF4 0%, #BBF7D0 100%);
+  border-left: 6px solid var(--success-color);
+}
+
+.history-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.history-item-type {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-medium);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-white);
+}
+
+.history-item.action .history-item-type {
+  background: var(--secondary-dark);
+}
+
+.history-item.response .history-item-type {
+  background: var(--success-dark);
+}
+
+.history-item-time {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-small);
+}
+
+.history-item-content {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: rgba(248, 249, 250, 0.8);
+  padding: 1.2rem;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--border-light);
+}
+
+/* 表单控件 - 高对比度 */
+.form-control,
+.input-group input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 3px solid var(--border-medium);
+  border-radius: var(--radius-medium);
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  background: var(--bg-card-solid);
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-soft);
+}
+
+.form-control:focus,
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium), 0 0 0 3px rgba(255, 107, 107, 0.1);
+  background: #FEFEFE;
+}
+
+/* 错误消息 - 高对比度 */
+.error-message {
+  background: linear-gradient(135deg, #FED7D7 0%, #FEB2B2 100%);
+  color: var(--danger-color);
+  padding: 1.2rem;
+  border-radius: var(--radius-medium);
+  border: 3px solid var(--danger-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* 空历史 - 高对比度 */
+.empty-history {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  background: var(--bg-card-solid);
+  border-radius: var(--radius-medium);
+  margin: 2rem 0;
+  box-shadow: var(--shadow-soft);
+  border: 3px dashed var(--border-medium);
+}
+
+.empty-history p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2rem 0 0.5rem 0;
+  color: var(--primary-color);
+  font-family: var(--font-secondary);
+}
+
+.empty-history small {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* 面板头部 - 高对比度 */
+.panel-header {
+  background: var(--bg-card-solid);
+  padding: 1.5rem;
+  border-radius: var(--radius-medium);
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1rem;
+  border: 2px solid var(--border-light);
+}
+
+.panel-header h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+}
+
+/* 特殊状态文字 */
+.info-label {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.info-value {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* 工具类 */
+.text-center { text-align: center; }
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  #app {
+    margin: 8px;
+    border-radius: var(--radius-medium);
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .env-viewer,
+  .interaction-panel {
+    padding: 1rem;
+  }
+  
+  .connection-status {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

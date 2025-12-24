@@ -1,0 +1,17 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black Dye -->
+  <rect x="0" y="0" width="16" height="16" fill="#F0F0F0"/>
+  
+  <!-- Bottle shape -->
+  <rect x="4" y="3" width="8" height="10" fill="#404040"/>
+  <rect x="5" y="4" width="6" height="8" fill="#000000"/>
+  
+  <!-- Bottle neck -->
+  <rect x="6" y="2" width="4" height="2" fill="#606060"/>
+  
+  <!-- Bottle top -->
+  <rect x="6" y="1" width="4" height="1" fill="#808080"/>
+  
+  <!-- Highlight -->
+  <rect x="5" y="4" width="1" height="6" fill="#333333"/>
+</svg>

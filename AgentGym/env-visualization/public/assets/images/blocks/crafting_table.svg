@@ -1,0 +1,9 @@
+<!-- Simple SVG placeholder for crafting table -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#DEB887"/>
+  <rect x="4" y="4" width="24" height="24" fill="#CD853F"/>
+  <rect x="8" y="8" width="16" height="16" fill="#8B4513"/>
+  <line x1="16" y1="8" x2="16" y2="24" stroke="#654321" stroke-width="2"/>
+  <line x1="8" y1="16" x2="24" y2="16" stroke="#654321" stroke-width="2"/>
+  <text x="16" y="30" text-anchor="middle" fill="white" font-size="4">CRAFT</text>
+</svg>

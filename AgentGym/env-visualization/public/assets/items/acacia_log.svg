@@ -1,0 +1,17 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Acacia Log -->
+  <rect x="0" y="0" width="16" height="16" fill="#C4915A"/>
+  <rect x="1" y="1" width="14" height="14" fill="#D4A16A"/>
+  <rect x="2" y="2" width="12" height="12" fill="#E4B17A"/>
+  
+  <!-- Wood grain lines -->
+  <line x1="0" y1="3" x2="16" y2="3" stroke="#B4815A" stroke-width="0.5"/>
+  <line x1="0" y1="7" x2="16" y2="7" stroke="#B4815A" stroke-width="0.5"/>
+  <line x1="0" y1="11" x2="16" y2="11" stroke="#B4815A" stroke-width="0.5"/>
+  
+  <!-- Tree rings on the ends -->
+  <circle cx="4" cy="4" r="2" fill="none" stroke="#B4815A" stroke-width="0.5"/>
+  <circle cx="4" cy="4" r="1" fill="none" stroke="#A4715A" stroke-width="0.5"/>
+  <circle cx="12" cy="12" r="2" fill="none" stroke="#B4815A" stroke-width="0.5"/>
+  <circle cx="12" cy="12" r="1" fill="none" stroke="#A4715A" stroke-width="0.5"/>
+</svg>

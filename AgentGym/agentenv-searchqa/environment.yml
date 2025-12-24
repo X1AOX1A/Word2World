@@ -1,0 +1,20 @@
+name: agentenv-searchqa
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.4.0
+  - torchvision=0.19.0
+  - torchaudio=2.4.0
+  - pytorch-cuda=12.1
+  - faiss-gpu=1.8.0
+  - pip
+  - pip:
+    - transformers
+    - datasets
+    - pyserini
+    - uvicorn
+    - fastapi

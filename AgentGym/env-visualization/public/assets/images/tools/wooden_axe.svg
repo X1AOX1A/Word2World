@@ -1,0 +1,6 @@
+<!-- Simple SVG placeholder for wooden axe -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect x="12" y="20" width="8" height="12" fill="#8B4513"/>
+  <path d="M8 4 L24 12 L20 16 L8 12 Z" fill="#DEB887"/>
+  <text x="16" y="30" text-anchor="middle" fill="white" font-size="4">AXE</text>
+</svg>

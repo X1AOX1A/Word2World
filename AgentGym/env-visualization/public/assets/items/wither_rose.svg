@@ -1,0 +1,17 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wither Rose -->
+  <rect x="0" y="0" width="16" height="16" fill="#2D2D2D"/>
+  <rect x="2" y="2" width="12" height="12" fill="#1A1A1A"/>
+  
+  <!-- Dark flower petals -->
+  <circle cx="8" cy="6" r="3" fill="#4A0E4E"/>
+  <circle cx="6" cy="8" r="2" fill="#5A1A5A"/>
+  <circle cx="10" cy="8" r="2" fill="#5A1A5A"/>
+  <circle cx="8" cy="10" r="2" fill="#5A1A5A"/>
+  
+  <!-- Dark center -->
+  <circle cx="8" cy="8" r="1.5" fill="#2A0A2A"/>
+  
+  <!-- Dark stem -->
+  <rect x="7" y="10" width="2" height="4" fill="#1A4A1A"/>
+</svg>

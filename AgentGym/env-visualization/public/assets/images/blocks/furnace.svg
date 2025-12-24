@@ -1,0 +1,8 @@
+<!-- Simple SVG placeholder for furnace -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#696969"/>
+  <rect x="4" y="4" width="24" height="24" fill="#A9A9A9"/>
+  <circle cx="16" cy="16" r="8" fill="#2F4F4F"/>
+  <circle cx="16" cy="16" r="4" fill="#FF4500"/>
+  <text x="16" y="30" text-anchor="middle" fill="white" font-size="4">FURNACE</text>
+</svg>

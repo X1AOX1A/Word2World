@@ -1,0 +1,16 @@
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Feather -->
+  <rect x="0" y="0" width="16" height="16" fill="#E0E0E0"/>
+  
+  <!-- Feather shaft -->
+  <line x1="8" y1="2" x2="8" y2="14" stroke="#8B4513" stroke-width="1"/>
+  
+  <!-- Feather vanes -->
+  <path d="M8 2 Q5 4 6 6 Q7 5 8 6" fill="#FFFFFF" stroke="#DDD" stroke-width="0.5"/>
+  <path d="M8 6 Q4 8 5 10 Q7 9 8 10" fill="#FFFFFF" stroke="#DDD" stroke-width="0.5"/>
+  <path d="M8 10 Q3 12 4 14 Q7 13 8 14" fill="#FFFFFF" stroke="#DDD" stroke-width="0.5"/>
+  
+  <path d="M8 2 Q11 4 10 6 Q9 5 8 6" fill="#FFFFFF" stroke="#DDD" stroke-width="0.5"/>
+  <path d="M8 6 Q12 8 11 10 Q9 9 8 10" fill="#FFFFFF" stroke="#DDD" stroke-width="0.5"/>
+  <path d="M8 10 Q13 12 12 14 Q9 13 8 14" fill="#FFFFFF" stroke="#DDD" stroke-width="0.5"/>
+</svg>

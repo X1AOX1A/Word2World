@@ -1,0 +1,26 @@
+[project]
+name = "agentenv_textworld"
+version = "0.0.1"
+description = "AgentGym TextWorld environment server"
+authors = [
+    {name = "AgentGym Maintainers", email = "123@123.com"},
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "textworld",
+    "gym",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+textworld = "agentenv_textworld:launch"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["agentenv_textworld"]

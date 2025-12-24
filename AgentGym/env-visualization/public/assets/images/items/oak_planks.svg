@@ -1,0 +1,8 @@
+<!-- Simple SVG placeholder for oak planks -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#DEB887"/>
+  <rect x="2" y="8" width="28" height="4" fill="#CD853F"/>
+  <rect x="2" y="16" width="28" height="4" fill="#CD853F"/>
+  <rect x="2" y="24" width="28" height="4" fill="#CD853F"/>
+  <text x="16" y="6" text-anchor="middle" fill="#8B4513" font-size="6">PLANKS</text>
+</svg>

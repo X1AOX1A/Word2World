@@ -1,0 +1,7 @@
+<!-- Simple SVG placeholder for oak log -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#8B4513"/>
+  <circle cx="16" cy="16" r="12" fill="#D2691E"/>
+  <circle cx="16" cy="16" r="8" fill="#F4A460"/>
+  <text x="16" y="20" text-anchor="middle" fill="white" font-size="10">LOG</text>
+</svg>
