@@ -147,7 +147,7 @@ def process_single_sample(
 ):
     wm_client = OpenAI(api_key="EMPTY", base_url=f"http://localhost:{wm_port}/v1")
     world_model = WorldModel(wm_messages, wm_client, model_name=wm_name)
-    react_agent = ReactAgent(agent_messages[:-1], agent_model)
+    react_agent = ReactAgent(agent_messages[:-1], agent_model, api_key, api_base_url)
     observation = agent_messages[-1]["content"]
 
     try:
@@ -268,6 +268,9 @@ def main():
     agent_instruct_file = args.agent_instruct_file
     wm_instruct_file = args.wm_instruct_file
     output_root = args.output_root
+    global api_key, api_base_url
+    api_key = args.api_key
+    api_base_url = args.api_base_url
 
     agent_instruct_data = read_json(agent_instruct_file)
     wm_instruct_data = read_json(wm_instruct_file)
