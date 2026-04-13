@@ -15,6 +15,7 @@ Code and data for **"*From Word to World*: Can Large Language Models be Implicit
 - [2025/12/21] We released the [paper](https://arxiv.org/abs/2512.18832) and [blog post](https://macaron.im/mindlab/research/how-world-models-unlock-scalable-agentic-rl).
 - [2025/12/22] We released the [code](https://github.com/X1AOX1A/Word2World), [models](https://huggingface.co/collections/X1AOX1A/llm-as-world-models) and [data](https://huggingface.co/datasets/X1AOX1A/LLMasWorldModels). We verified the evaluation pipeline on **ALFWorld** using **Qwen2.5-7B** (world model) and **gpt-4o** (agent).
 - [2025/12/23] Paper is available on [arXiv](https://arxiv.org/abs/2512.18832) and [Hugging Face](https://huggingface.co/papers/2512.18832).
+- [2026/04/06] Our paper is accepted to ACL 2026 🎉.
 
 ## 🔗 Quick Links
 
